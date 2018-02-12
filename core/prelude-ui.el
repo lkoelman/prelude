@@ -37,9 +37,9 @@
 ;; in a tty tool-bar-mode does not properly auto-load, and is
 ;; already disabled anyway
 (when (fboundp 'tool-bar-mode)
-  (tool-bar-mode -1))
+  (tool-bar-mode 1))
 
-(menu-bar-mode -1)
+(menu-bar-mode 1)
 
 ;; the blinking cursor is nothing, but an annoyance
 (blink-cursor-mode -1)

@@ -94,9 +94,9 @@
                         (and (zerop (first (syntax-ppss)))
                              (python-info-statement-starts-block-p)
                              'after)))))
-  (when (fboundp #'python-imenu-create-flat-index)
+  (when (fboundp #'python-imenu-create-index)
     (setq-local imenu-create-index-function
-                #'python-imenu-create-flat-index))
+                #'python-imenu-create-index))
   (add-hook 'post-self-insert-hook
             #'electric-layout-post-self-insert-function nil 'local)
   (add-hook 'after-save-hook 'prelude-python-mode-set-encoding nil 'local))
