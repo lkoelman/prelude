@@ -2,6 +2,9 @@
 (add-hook 'org-mode-hook
           (lambda () (imenu-add-to-menubar "Imenu")))
 
+;; four spaces indentation in lists
+(setq-default org-list-indent-offset 4)
+
 ;; fontify code in code blocks
 (setq org-src-fontify-natively t)
 
