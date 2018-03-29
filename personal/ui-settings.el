@@ -17,8 +17,8 @@
                            (diminish 'prelude-mode)))
 
 ;; Show line numbers
-;; (global-linum-mode) ;; always show line numbers
-(add-hook 'prog-mode-hook 'linum-mode) ;; show line numbers in programming modes
+(global-linum-mode) ;; always show line numbers
+;; (add-hook 'prog-mode-hook 'linum-mode) ;; show line numbers in programming modes
 
 ;; Set fonts (can use menu `Options > set default font`)
 ;; (set-face-font 'default "Monospace-10")

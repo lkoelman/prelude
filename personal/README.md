@@ -27,11 +27,13 @@ Symlink `~/.emacs.d/personal` to this directory:
 
     ln -s /path/to/prelude_personal ~/.emacs.d/personal
 
-Emable the Prelude modules you want to use:
+Enable the Prelude modules you want to use:
 
     emacs ~/.emacs.d/prelude-modules.el
 
-## Customizations
+## Customizations List
+
+These are the customization from the bare Prelude distribution:
 
 - start from bare Prelude distribution
 

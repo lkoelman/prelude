@@ -2,6 +2,7 @@
 
 ;; monokai theme
 (prelude-require-package 'monokai-theme)
+; (setq prelude-theme 'monokai) ; put this line in personal/preload/ui-preload.el
 
 ;; package Adaptive-wrap (for reflowing wrapped lines)
 (prelude-require-package 'adaptive-wrap)
@@ -18,6 +19,7 @@
 ;; (powerline-default-theme)
 
 ;; multiple cursors : https://github.com/magnars/multiple-cursors.el
+(prelude-require-package 'multiple-cursors)
 (require 'multiple-cursors)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 
