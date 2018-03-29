@@ -2,7 +2,8 @@
 
 ;; monokai theme
 (prelude-require-package 'monokai-theme)
-; (setq prelude-theme 'monokai) ; put this line in personal/preload/ui-preload.el
+(prelude-require-package 'gruvbox-theme)
+; (setq prelude-theme '<monokai/gruvbox-dark-medium>) ; put this line in personal/preload/ui-preload.el
 
 ;; package Adaptive-wrap (for reflowing wrapped lines)
 (prelude-require-package 'adaptive-wrap)

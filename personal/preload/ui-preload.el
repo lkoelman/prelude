@@ -1,1 +1,1 @@
-(setq prelude-theme 'monokai)
+(setq prelude-theme 'gruvbox-dark-medium)

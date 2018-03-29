@@ -2,7 +2,7 @@
 
 ## Emacs Tweaks
 
-Improve Emacs font rendering. Create `.Xresources` file:
+Improve Emacs font rendering under Linux. Create `.Xresources` file:
 
 ```
 Xft.antialias:  1
@@ -16,24 +16,22 @@ Then do `xrdb -merge ~/.Xresources` in shell and restart emacs.
 
 ## Installation
 
-Install Prelude distribution in `~/.emacs.d`.
+Clone Prelude distribution to `~/.emacs.d`.
 
-    git clone git://github.com/bbatsov/prelude.git path/to/local/repo
-    ln -s path/to/local/repo ~/.emacs.d
+    git clone git://github.com/lkoelman/prelude.git my_prelude_clone
+    ln -s my_prelude_clone ~/.emacs.d
     cd ~/.emacs.d
     cp sample/prelude-packages.el .
-
-Symlink `~/.emacs.d/personal` to this directory:
-
-    ln -s /path/to/prelude_personal ~/.emacs.d/personal
 
 Enable the Prelude modules you want to use:
 
     emacs ~/.emacs.d/prelude-modules.el
 
+Restart multiple times until everything is installed. If a package is not found on MELPA but it is listed, try a manual `M-X package-install RET` and click the package name manually using your mouse.
+
 ## Customizations List
 
-These are the customization from the bare Prelude distribution:
+These are the customization w.r.t. the bare Prelude distribution:
 
 - start from bare Prelude distribution
 
