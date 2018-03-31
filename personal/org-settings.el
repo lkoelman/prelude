@@ -1,6 +1,11 @@
 ;; org-mode support for imenu
 (add-hook 'org-mode-hook
-          (lambda () (imenu-add-to-menubar "Imenu")))
+          (lambda ()
+            (imenu-add-to-menubar "Imenu")
+            (face-remap-add-relative 'bold 'font-lock-builtin-face)
+            (face-remap-add-relative 'italic 'font-lock-keyword-face)))
+;; see https://www.gnu.org/software/emacs/manual/html_node/elisp/Face-Remapping.html
+;; for remapping fonts
 
 ;; four spaces indentation in lists
 (setq-default org-list-indent-offset 4)

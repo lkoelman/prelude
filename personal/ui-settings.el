@@ -4,6 +4,8 @@
 ;; Emacs keybindings
 ; (global-set-key "\C-x\C-k" 'kill-buffer-and-window)
 (global-set-key "\C-x\C-k" 'kill-this-buffer)
+(global-set-key (kbd "M-RET") 'newline-and-indent)
+(global-set-key (kbd "M-S-RET") 'newline-and-indent)
 
 ;; Clean up modeline: hide minor modes
 (require 'diminish)
