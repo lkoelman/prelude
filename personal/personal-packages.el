@@ -1,5 +1,8 @@
 ;; Install packages that do not ship with Prelude Emacs dsitribution
 
+;; Smex enhances M-x to list most recent/frequently used commands first
+(prelude-require-package 'smex)
+
 ;; monokai theme
 (prelude-require-package 'monokai-theme)
 (prelude-require-package 'gruvbox-theme)
