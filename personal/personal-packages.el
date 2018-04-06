@@ -3,6 +3,9 @@
 ;; Smex enhances M-x to list most recent/frequently used commands first
 (prelude-require-package 'smex)
 
+;; Aggressive indent works better than electric indent mode with LISP
+(prelude-require-package 'aggressive-indent)
+
 ;; monokai theme
 (prelude-require-package 'monokai-theme)
 (prelude-require-package 'gruvbox-theme)
@@ -26,4 +29,7 @@
 (prelude-require-package 'multiple-cursors)
 (require 'multiple-cursors)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+
+;; Personal packages
+(require 'latte-mode)
 
