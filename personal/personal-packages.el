@@ -31,5 +31,5 @@
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 
 ;; Personal packages
-(require 'latte-mode)
+; (require 'latte-mode)
 
