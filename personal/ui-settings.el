@@ -20,10 +20,12 @@
 
 ;; Show line numbers
 (global-linum-mode) ;; always show line numbers
-;; (add-hook 'prog-mode-hook 'linum-mode) ;; show line numbers in programming modes
+;; (add-hook 'prog-mode-hook 'linum-mode) ;; show line numbers in programming modes only
 
+;; Disable some prelude default modes
 ;; Disable beacon light that follows cursor
 (beacon-mode -1)
+(flyspell-mode -1)
 
 ;; Set fonts (can use menu `Options > set default font`)
 ;; (set-face-font 'default "Monospace-10")

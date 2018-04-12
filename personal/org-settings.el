@@ -8,10 +8,16 @@
 ;; for remapping fonts
 
 ;; four spaces indentation in lists
-(setq-default org-list-indent-offset 4)
+(setq-default org-list-indent-offset 2) ; 2 in addition to default 2
 
 ;; fontify code in code blocks
 (setq org-src-fontify-natively t)
+
+;; Disable Ivy for tags completion since it breaks it, see:
+;; https://github.com/abo-abo/swiper/issues/1191#issuecomment-328114345
+(add-to-list
+ 'ivy-completing-read-handlers-alist
+ '(org-set-tags . completing-read-default))
 
 ;; automate creation if IDs
 (require 'org-id)
