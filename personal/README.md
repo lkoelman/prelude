@@ -1,5 +1,34 @@
 # Prelude Emacs customizations
 
+## Installation
+
+Clone Prelude distribution to `~/.emacs.d`.
+
+    git clone git://github.com/lkoelman/prelude.git my_prelude_clone
+    ln -s my_prelude_clone ~/.emacs.d
+    cd ~/.emacs.d
+    cp sample/prelude-packages.el .
+
+Enable the Prelude modules you want to use:
+
+    emacs ~/.emacs.d/prelude-modules.el
+
+Install the packages loaded in personal/preload manually using `package-install`,
+since they can't be auto-installed.
+
+Restart multiple times until everything is installed. If a package is not found on MELPA but it is listed, try a `package-refresh-contents`, `package-install <package-name>`.
+
+Merge contents of personal/custom.el.bak with the auto-generated custom.el.
+
+### Update Prelude
+
+See manual. But because we are running a fork we do:
+
+``` sh
+git remote add upstream https://github.com/bbatsov/prelude.git
+git pull upstream # fetch and merge
+```
+
 ## Emacs Tweaks
 
 Improve Emacs font rendering under Linux. Create `.Xresources` file:
@@ -14,29 +43,7 @@ Xft.rgba:       rgb
 
 Then do `xrdb -merge ~/.Xresources` in shell and restart emacs.
 
-## Installation
 
-Clone Prelude distribution to `~/.emacs.d`.
-
-    git clone git://github.com/lkoelman/prelude.git my_prelude_clone
-    ln -s my_prelude_clone ~/.emacs.d
-    cd ~/.emacs.d
-    cp sample/prelude-packages.el .
-
-Enable the Prelude modules you want to use:
-
-    emacs ~/.emacs.d/prelude-modules.el
-
-Restart multiple times until everything is installed. If a package is not found on MELPA but it is listed, try a manual `M-X package-install RET` and click the package name manually using your mouse.
-
-### Update Prelude
-
-See manual. But because we are running a fork we do:
-
-``` sh
-git remote add upstream https://github.com/bbatsov/prelude.git
-git pull upstream # fetch and merge
-```
 
 ### Emacs in macOS (system-integrated)
 
