@@ -20,6 +20,13 @@ Restart multiple times until everything is installed. If a package is not found 
 
 Merge contents of personal/custom.el.bak with the auto-generated custom.el.
 
+Create shell alias to use emacs in client-mode:
+
+```sh
+# Emacs in client mode if server running, else start new server
+alias edit="emacsclient -nw -a \"\""
+```
+
 ### Update Prelude
 
 See manual. But because we are running a fork we do:

@@ -1,7 +1,7 @@
 ;; Show line numbers
-(global-linum-mode) ;; always show line numbers
-;; (add-hook 'prog-mode-hook 'linum-mode) ;; show line numbers in programming modes only
-
+; (global-linum-mode) ;; always show line numbers
+;; NOTE: linum mode get very slow on large documents
+(add-hook 'prog-mode-hook 'linum-mode) ;; show line numbers in programming modes only
 
 ;; Set fonts (can use menu `Options > set default font`)
 ;; (set-face-font 'default "Monospace-10")

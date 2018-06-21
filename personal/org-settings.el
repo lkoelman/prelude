@@ -1,9 +1,17 @@
 ;; org-mode support for imenu
 (add-hook 'org-mode-hook
           (lambda ()
+            (interactive)               ; for prefix arguments to work
+            (linum-mode -1)             ; get very slow on large files
             (imenu-add-to-menubar "Imenu")
             (face-remap-add-relative 'bold 'font-lock-builtin-face)
-            (face-remap-add-relative 'italic 'font-lock-keyword-face)))
+            (face-remap-add-relative 'italic 'font-lock-keyword-face)
+            ;; (flyspell-mode-off)
+            (let ((current-prefix-arg '(-1)))
+              (call-interactively 'flycheck-mode)
+              (call-interactively 'electric-indent-mode)
+              (call-interactively 'company-mode))
+            ))
 ;; see https://www.gnu.org/software/emacs/manual/html_node/elisp/Face-Remapping.html
 ;; for remapping fonts
 
