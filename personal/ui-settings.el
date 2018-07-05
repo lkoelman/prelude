@@ -6,6 +6,11 @@
 (global-set-key "\C-x\C-k" 'kill-this-buffer)
 (global-set-key (kbd "M-RET") 'newline-and-indent)
 (global-set-key (kbd "M-S-RET") 'newline-and-indent)
+; Move multiple lines (use forward-line or next-line)
+(global-set-key (kbd "M-n")
+                (lambda () (interactive) (forward-line  5)))
+(global-set-key (kbd "M-p")
+                (lambda () (interactive) (forward-line -5)))
 
 ;; Clean up modeline: hide minor modes
 (require 'diminish)
