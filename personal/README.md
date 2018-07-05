@@ -24,7 +24,7 @@ Create shell alias to use emacs in client-mode:
 
 ```sh
 # Emacs in client mode if server running, else start new server
-alias edit="emacsclient -nw -a \"\""
+alias edit="emacsclient -t -a ''"
 ```
 
 ### Update Prelude
