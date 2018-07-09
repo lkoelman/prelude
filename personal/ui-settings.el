@@ -23,7 +23,6 @@
                            (diminish 'guru-mode)
                            (diminish 'prelude-mode)))
 
-
 ;; Disable some prelude default modes
 ;; Disable beacon light that follows cursor
 (beacon-mode -1)

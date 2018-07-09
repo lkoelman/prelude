@@ -1,10 +1,11 @@
 ;; Show line numbers
-; (global-linum-mode) ;; always show line numbers
+;; (global-linum-mode) ;; always show line numbers
 ;; NOTE: linum mode get very slow on large documents
+;; (add-hook 'prog-mode-hook 'linum-mode) ;; show line numbers in programming modes only
 
 ;; Minor modes common to all programming modes
 (add-hook 'prog-mode-hook
-          (progn
+          (lambda ()
             (linum-mode)
             (flyspell-mode -1)))
 
