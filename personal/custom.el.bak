@@ -6,7 +6,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(markdown-code-face ((t (:inherit org-code))))
  '(org-code ((t (:foreground "red"))))
  '(org-done ((t (:foreground "forest green" :weight bold))))
  '(org-level-1 ((t (:inherit default))))
@@ -28,7 +27,7 @@
  '(compilation-message-face (quote default))
  '(custom-safe-themes
    (quote
-    ("ed0b4fc082715fc1d6a547650752cd8ec76c400ef72eb159543db1770a27caa7" "42b9d85321f5a152a6aef0cc8173e701f572175d6711361955ecfb4943fe93af" "021720af46e6e78e2be7875b2b5b05344f4e21fad70d17af7acfd6922386b61e" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "53f97243218e8be82ba035ae34c024fd2d2e4de29dc6923e026d5580c77ff702" "2022c5a92bbc261e045ec053aa466705999863f14b84c012a43f55a95bf9feb8" default)))
+    ("021720af46e6e78e2be7875b2b5b05344f4e21fad70d17af7acfd6922386b61e" "ed0b4fc082715fc1d6a547650752cd8ec76c400ef72eb159543db1770a27caa7" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "53f97243218e8be82ba035ae34c024fd2d2e4de29dc6923e026d5580c77ff702" "2022c5a92bbc261e045ec053aa466705999863f14b84c012a43f55a95bf9feb8" default)))
  '(fci-rule-color "#3C3D37")
  '(fill-column 120)
  '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
@@ -48,10 +47,11 @@
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(package-selected-packages
    (quote
-    (gruvbox-theme multiple-cursors solarized-theme markdown-mode spaceline adaptive-wrap monokai-theme company-anaconda anaconda-mode json-mode js2-mode rainbow-mode elisp-slime-nav rainbow-delimiters company counsel swiper ivy vkill exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights undo-tree smartrep smartparens smart-mode-line operate-on-number move-text magit projectile ov imenu-anywhere guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region epl editorconfig easy-kill diminish diff-hl discover-my-major dash crux browse-kill-ring beacon anzu ace-window)))
+    (emacsql-sqlite org-ref request-deferred deferred smex multiple-cursors solarized-theme markdown-mode spaceline adaptive-wrap monokai-theme company-anaconda anaconda-mode json-mode js2-mode rainbow-mode elisp-slime-nav rainbow-delimiters company counsel swiper ivy vkill exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights undo-tree smartrep smartparens smart-mode-line operate-on-number move-text magit projectile ov imenu-anywhere guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region epl editorconfig easy-kill diminish diff-hl discover-my-major dash crux browse-kill-ring beacon anzu ace-window)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(pos-tip-background-color "#FFFACE")
  '(pos-tip-foreground-color "#272822")
+ '(safe-local-variable-values (quote ((author . "Lucas Koelman"))))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
