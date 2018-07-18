@@ -20,16 +20,15 @@
 (setq tab-width 4)
 ;; (setq indent-line-function 'insert-tab)
 
-;; for auto indent of wrapped lines:
-;; M-x visual-line-mode
-;; M-x adaptive-wrap-prefix-mode
+;; Visual line mode wraps text without altering the buffer
+(global-visual-line-mode +1)
+(setq visual-line-fringe-indicators '(left-curly-arrow right-curly-arrow))
+
+;; Auto indent wrapped lines in visual line mode
 (add-hook 'visual-line-mode-hook
           (lambda ()
             (adaptive-wrap-prefix-mode +1)
             (diminish 'visual-line-mode)))
-
-;; Visual line mode wraps text without altering the buffer
-(global-visual-line-mode +1)
 
 ;; Enable transient mark mode
 (transient-mark-mode 1) ;; (default setting) the marked region is active and highlighted
