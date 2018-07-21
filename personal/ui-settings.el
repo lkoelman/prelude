@@ -2,15 +2,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
 ;; Emacs keybindings
-; (global-set-key "\C-x\C-k" 'kill-buffer-and-window)
-(global-set-key "\C-x\C-k" 'kill-this-buffer)
-(global-set-key (kbd "M-RET") 'newline-and-indent)
-(global-set-key (kbd "M-S-RET") 'newline-and-indent)
-; Move multiple lines (use forward-line or next-line)
-(global-set-key (kbd "M-n")
-                (lambda () (interactive) (forward-line  5)))
-(global-set-key (kbd "M-p")
-                (lambda () (interactive) (forward-line -5)))
+;; see lkmn-mode.el for keybindings
 
 ;; Clean up modeline: hide minor modes
 (require 'diminish)
