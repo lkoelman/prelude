@@ -1,0 +1,26 @@
+;; Better c++ syntax highlighting
+;; https://github.com/ludwigpacifici/modern-cpp-font-lock
+(prelude-require-package 'modern-cpp-font-lock)
+(add-hook 'c++-mode-hook #'modern-c++-font-lock-mode)
+
+;; Enable extra font locking
+(require 'modern-cpp-font-lock)
+(add-to-list 'modern-c++-operators "=")
+(add-to-list 'modern-c++-operators "~")
+(add-to-list 'modern-c++-operators "^")
+(add-to-list 'modern-c++-operators "&")
+(add-to-list 'modern-c++-operators "|")
+(add-to-list 'modern-c++-operators "!")
+(add-to-list 'modern-c++-operators "<")
+(add-to-list 'modern-c++-operators ">")
+(add-to-list 'modern-c++-operators ":")
+(add-to-list 'modern-c++-operators ",")
+(add-to-list 'modern-c++-operators "+")
+(add-to-list 'modern-c++-operators "-")
+(add-to-list 'modern-c++-operators "*")
+(add-to-list 'modern-c++-operators "/")
+(add-to-list 'modern-c++-operators "%")
+(setq modern-c++-literal-boolean t)
+(setq modern-c++-literal-integer t)
+(setq modern-c++-literal-null-pointer t)
+(setq modern-c++-literal-string t)
