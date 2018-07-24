@@ -42,7 +42,8 @@
       '(("TOREAD" . (:foreground "royal blue" :weight bold))
         ("READING" . (:foreground "orange" :weight bold))
         ("SUMMARIZED" . (:foreground "chartreuse1" :weight bold))
-        ("TODO" . org-warning)
+        ("TODO" . (:foreground "deep pink" :weight bold))
         ("STARTED" . "yellow")
+        ("INPROGRESS" . "yellow")
         ("CANCELED" . (:foreground "blue" :weight bold))))
 
