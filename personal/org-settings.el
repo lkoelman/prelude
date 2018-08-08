@@ -31,6 +31,9 @@
 (require 'org-id)
 (setq org-id-link-to-org-use-id 'create-if-interactive-and-no-custom-id)
 
+;; Use mouse to toggle checkboxes
+(require 'org-mouse)
+
 ;; Faces for priority markers (number is ASCI code)
 (setq org-priority-faces
       '((65 . (:foreground "deep pink" :weight bold))
