@@ -3,6 +3,7 @@
           (lambda ()
             (interactive)               ; for prefix arguments to work
             (linum-mode -1)             ; get very slow on large files
+            (turn-on-auto-fill)         ; auto line break at 'fill-column
             (imenu-add-to-menubar "Imenu")
             (face-remap-add-relative 'bold 'font-lock-builtin-face)
             (face-remap-add-relative 'italic 'font-lock-keyword-face)
@@ -30,6 +31,9 @@
 ;; automate creation if IDs
 (require 'org-id)
 (setq org-id-link-to-org-use-id 'create-if-interactive-and-no-custom-id)
+
+;; reference management in org-mode
+(require 'org-ref)
 
 ;; Use mouse to toggle checkboxes
 (require 'org-mouse)

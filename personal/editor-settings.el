@@ -14,6 +14,7 @@
 
 ;; Tab stops, see https://www.emacswiki.org/emacs/TabStopList
 (setq tab-stop-list (number-sequence 4 120 4))
+(setq fill-column 80)
 ;; Following should be set by default in Prelude
 (setq-default indent-tabs-mode nil) ; turn off TAB for indentation
 (setq-default tab-width 4) ; a tab is equal to four spaces

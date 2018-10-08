@@ -5,3 +5,6 @@
 (setq org-ref-bibliography-notes "~/cloudstore_m/notes/bibliography_notes.org"
       org-ref-default-bibliography '("~/cloudstore_m/notes/zotero_library.bib")
       org-ref-pdf-directory "~/cloudstore_m/notes/pubs_annotated")
+
+;; Allow links in style [[ref:mylabel]]
+(setq org-latex-prefer-user-labels t)
