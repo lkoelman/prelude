@@ -1,3 +1,30 @@
+;; ======================================================================
+;; Configure module org-ref for reference management
+;; ======================================================================
+
+;; (prelude-require-package 'org-ref)
+;; (require 'org-ref)
+;; (setq org-ref-bibliography-notes "~/cloudstore_m/notes/bibliography_notes.org"
+;;       org-ref-default-bibliography '("~/cloudstore_m/notes/zotero_library.bib")
+;;       org-ref-pdf-directory "~/cloudstore_m/notes/pubs_annotated")
+
+;; Configuration according to URL`https://github.com/jkitchin/org-ref/blob/master/README.org'
+(setq reftex-default-bibliography '("~/cloudstore_m/notes/zotero_library.bib"))
+
+;; Allow links in style [[ref:mylabel]]
+(setq org-latex-prefer-user-labels t)
+
+;; ======================================================================
+;; Org-mode settings
+;; ======================================================================
+
+;; automate creation if IDs
+(require 'org-id)
+(setq org-id-link-to-org-use-id 'create-if-interactive-and-no-custom-id)
+
+;; Use mouse to toggle checkboxes
+(require 'org-mouse)
+
 ;; org-mode support for imenu
 (add-hook 'org-mode-hook
           (lambda ()
@@ -7,7 +34,7 @@
             (imenu-add-to-menubar "Imenu")
             (face-remap-add-relative 'bold 'font-lock-builtin-face)
             (face-remap-add-relative 'italic 'font-lock-keyword-face)
-            ;; (flyspell-mode-off)
+            ;; Disable several modes:
             (let ((current-prefix-arg '(-1)))
               (call-interactively 'flycheck-mode)
               (call-interactively 'electric-indent-mode)
@@ -27,16 +54,6 @@
 (add-to-list
  'ivy-completing-read-handlers-alist
  '(org-set-tags . completing-read-default))
-
-;; automate creation if IDs
-(require 'org-id)
-(setq org-id-link-to-org-use-id 'create-if-interactive-and-no-custom-id)
-
-;; reference management in org-mode
-(require 'org-ref)
-
-;; Use mouse to toggle checkboxes
-(require 'org-mouse)
 
 ;; Faces for priority markers (number is ASCI code)
 (setq org-priority-faces
