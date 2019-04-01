@@ -27,8 +27,8 @@
 ;; ======================================================================
 
 ;; Enable menu bar
-(menu-bar-mode 1)
-(tool-bar-mode 1)
+(menu-bar-mode -1)
+;; (tool-bar-mode -1)
 
 ;; Add imenu to menubar in several modes
 (add-hook 'markdown-mode-hook
@@ -42,6 +42,13 @@
             (linum-mode)
             (flyspell-mode -1)))
 
+;; Tabbar
+(prelude-require-package 'tabbar)
+(require 'tabbar)
+
+;; Tabbar settings
+;; see https://gist.github.com/3demax/1264635/91ccb6c423effd811dbdb1412b70c15e95fa700d
+(tabbar-mode 1)
 
 ;; ======================================================================
 ;; Wrapping and Indenting
