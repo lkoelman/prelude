@@ -43,12 +43,13 @@
             (flyspell-mode -1)))
 
 ;; Tabbar
-(prelude-require-package 'tabbar)
-(require 'tabbar)
-
-;; Tabbar settings
-;; see https://gist.github.com/3demax/1264635/91ccb6c423effd811dbdb1412b70c15e95fa700d
-(tabbar-mode 1)
+(if (display-graphic-p)
+    (progn
+      (prelude-require-package 'tabbar)
+      (require 'tabbar)
+      ;; Tabbar settings
+      ;; see https://gist.github.com/3demax/1264635/91ccb6c423effd811dbdb1412b70c15e95fa700d
+      (tabbar-mode 1)))
 
 ;; ======================================================================
 ;; Wrapping and Indenting

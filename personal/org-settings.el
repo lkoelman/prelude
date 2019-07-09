@@ -69,5 +69,6 @@
         ("TODO" . (:foreground "deep pink" :weight bold))
         ("STARTED" . "yellow")
         ("INPROGRESS" . "yellow")
-        ("CANCELED" . (:foreground "blue" :weight bold))))
+        ("CANCELED" . (:foreground "blue" :weight bold))
+        ("CANCELLED" . (:foreground "blue" :weight bold))))
 
