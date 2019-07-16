@@ -31,16 +31,17 @@
 ;; (tool-bar-mode -1)
 
 ;; Add imenu to menubar in several modes
-(add-hook 'markdown-mode-hook
-          (lambda ()
-            (imenu-add-to-menubar "Imenu")))
+(if (display-graphic-p)
+  (add-hook 'markdown-mode-hook
+            (lambda ()
+              (imenu-add-to-menubar "Imenu")))
 
 
-(add-hook 'prog-mode-hook
-          (lambda ()
-            (imenu-add-to-menubar "Imenu")
-            (linum-mode)
-            (flyspell-mode -1)))
+  (add-hook 'prog-mode-hook
+            (lambda ()
+              (imenu-add-to-menubar "Imenu")
+              (linum-mode)
+              (flyspell-mode -1))))
 
 ;; Tabbar
 (if (display-graphic-p)
@@ -99,18 +100,7 @@
 ;; Modeline
 ;; ======================================================================
 
-;; Clean up modeline: hide minor modes
-(require 'diminish)
-(prelude-eval-after-init (progn
-                           (diminish 'company-mode)
-                           (diminish 'ivy-mode)
-                           (diminish 'editorconfig-mode)
-                           (diminish 'smartparens-mode)
-                           (diminish 'which-key-mode)
-                           (diminish 'guru-mode)
-                           (diminish 'prelude-mode)))
-
-;; Fancy modeline from spacemacs distribution
+; ;; Fancy modeline from spacemacs distribution
 (prelude-require-package 'spaceline)
 (require 'spaceline-config)
 (spaceline-emacs-theme)
@@ -121,7 +111,6 @@
 ;; (powerline-default-theme)
 
 
-
 ;; Automatic desktop/session saving
 (desktop-save-mode 1)
 (setq desktop-restore-frames nil) ;; don't save frame and window configuration
@@ -130,6 +119,7 @@
 ;; Put cursor on top of buffer rather than center
 (setq imenu-list-after-jump-hook nil)
 (add-hook 'imenu-list-after-jump-hook #'recenter-top-bottom)
+
 ;; Tree view on left side by default
 (setq imenu-list-position 'left)
 
