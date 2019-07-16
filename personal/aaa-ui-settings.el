@@ -31,17 +31,16 @@
 ;; (tool-bar-mode -1)
 
 ;; Add imenu to menubar in several modes
-(if (display-graphic-p)
-  (add-hook 'markdown-mode-hook
-            (lambda ()
-              (imenu-add-to-menubar "Imenu")))
+(add-hook 'markdown-mode-hook
+          (lambda ()
+            (imenu-add-to-menubar "Imenu")))
 
 
-  (add-hook 'prog-mode-hook
-            (lambda ()
-              (imenu-add-to-menubar "Imenu")
-              (linum-mode)
-              (flyspell-mode -1))))
+(add-hook 'prog-mode-hook
+          (lambda ()
+            (imenu-add-to-menubar "Imenu")
+            (linum-mode)
+            (flyspell-mode -1)))
 
 ;; Tabbar
 (if (display-graphic-p)
