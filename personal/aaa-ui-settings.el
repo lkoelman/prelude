@@ -28,7 +28,7 @@
 
 ;; Enable menu bar
 (menu-bar-mode -1)
-;; (tool-bar-mode -1)
+(tool-bar-mode -1)
 
 ;; Add imenu to menubar in several modes
 (add-hook 'markdown-mode-hook
@@ -36,10 +36,13 @@
             (imenu-add-to-menubar "Imenu")))
 
 
+;; Minor modes in all programming modes
+(prelude-require-package 'highlight-numbers)
 (add-hook 'prog-mode-hook
           (lambda ()
             (imenu-add-to-menubar "Imenu")
             (linum-mode)
+            (highlight-numbers-mode)
             (flyspell-mode -1)))
 
 ;; Tabbar
