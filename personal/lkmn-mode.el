@@ -7,7 +7,9 @@
 (define-key lkmn-mode-map (kbd "C-x C-k") 'kill-this-buffer)
 (define-key lkmn-mode-map (kbd "M-RET") 'newline-and-indent)
 (define-key lkmn-mode-map (kbd "M-S-RET") 'newline-and-indent)
-(define-key lkmn-mode-map (kbd "M-j") 'ivy-imenu-anywhere)
+(define-key lkmn-mode-map (kbd "M-j M-s") 'helm-imenu)
+(define-key lkmn-mode-map (kbd "M-j M-j") 'avy-goto-word-1)
+(define-key lkmn-mode-map (kbd "M-j M-l") 'avy-goto-line)
 
 ;; Move multiple lines (use forward-line or next-line)
 (define-key lkmn-mode-map (kbd "M-n")
